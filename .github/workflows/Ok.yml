@@ -108,9 +108,9 @@ jobs:
           echo "Applying next SUSFS patches..."
            cp ../../kernel_patches/ksu/susfs_fix_patches/v2.0.0/1_fix_base.c.patch ./common
 
-         # Change to common directory and apply SUSFS patch
-           cd ../common           
-           patch -p1 --fuzz=3 < 1_fix_base.c.patch
+          # Change to common directory and apply SUSFS patch
+          cd ../common           
+          patch -p1 --fuzz=3 < 1_fix_base.c.patch
           
       - name: Add SUSFS Configuration Settings
         run: |

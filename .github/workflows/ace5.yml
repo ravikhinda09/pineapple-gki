@@ -167,7 +167,7 @@ jobs:
           cd "$CONFIG"
           
           echo "Copying Image"
-          cp ./out/dist/Image ../AnyKernel3/Image
+          cp ./kernel_platform/out/msm-kernel-pineapple-gki/dist/Image ../AnyKernel3/Image
           
       - name: Create ZIP Files for Different Formats
         run: |

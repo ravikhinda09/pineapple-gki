@@ -102,6 +102,15 @@ jobs:
           cd ../common
           patch -p1 < 50_add_susfs_in_gki-android14-6.1.patch || true
 
+      - name: Apply Next-SUSFS Patches
+        run: |
+          echo "Changing to configuration directory: $CONFIG..."
+          cd "$CONFIG/kernel_platform"
+          
+          echo "Applying next SUSFS patches..."
+          # cp ../../kernel_patches/ksu/susfs_fix_patches/v2.0.0/1_fix_base.c.patch ./
+          # patch -p1 --fuzz=3 < 1_fix_base.c.patch
+          
       - name: Add SUSFS Configuration Settings
         run: |
           echo "Changing to configuration directory: $CONFIG..."

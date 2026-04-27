@@ -108,8 +108,8 @@ jobs:
           cd "$CONFIG/kernel_platform"
           
           echo "Applying next SUSFS patches..."
-          # cp ../../kernel_patches/ksu/susfs_fix_patches/v2.0.0/1_fix_base.c.patch ./
-          # patch -p1 --fuzz=3 < 1_fix_base.c.patch
+           cp ../../kernel_patches/ksu/susfs_fix_patches/v2.0.0/1_fix_base.c.patch ./
+           patch -p1 --fuzz=3 < 1_fix_base.c.patch
           
       - name: Add SUSFS Configuration Settings
         run: |

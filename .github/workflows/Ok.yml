@@ -97,7 +97,7 @@ jobs:
           cp ../../susfs4ksu/kernel_patches/include/linux/* ./common/include/linux/
           
           # Change to common directory and apply SUSFS patch
-          cd ../common
+          cd common
           patch -p1 < 50_add_susfs_in_gki-android14-6.1.patch || true
 
       - name: Apply Next-SUSFS Patches
@@ -109,7 +109,7 @@ jobs:
            cp ../../kernel_patches/ksu/susfs_fix_patches/v2.0.0/1_fix_base.c.patch ./common
 
            # Change to common directory and apply SUSFS patch
-           cd ../common           
+           cd common           
            patch -p1 --fuzz=3 < 1_fix_base.c.patch
           
       - name: Add SUSFS Configuration Settings

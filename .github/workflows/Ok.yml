@@ -169,7 +169,7 @@ jobs:
           #git config --global user.name "TheWildJames"
           #git add *
           #git commit -s -a -m "getting rid of -dirty"
-          ./kernel_platform/build_with_bazel.py -t pineapple gki --lto=full
+          ./kernel_platform/build_with_bazel.py -t pineapple gki
 
       - name: Create Bootimgs Folder and Copy Images
         run: |
